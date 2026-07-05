@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-deep-blue: #0F1D2E;
+  --color-brand-river-glaze: #EDF4F9;
+  --color-brand-clay-sand: #D2C5B1;
+  --color-brand-sky-blue: #0B6CAD;
+  --color-brand-amber-blossom: #D49D42;
+  --color-brand-midnight-blue: #0A1520;
+
+  --font-display: "Reem Kufi", "Noto Kufi Arabic", serif;
+  --font-sans: "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-river-glaze);
+    color: var(--color-brand-deep-blue);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Custom focus outline for accessibility */
+  *:focus-visible {
+    outline: 2px solid var(--color-brand-amber-blossom);
+    outline-offset: 4px;
+  }
+}
+
+/* Wavy background signature animation */
+@keyframes riverFlow {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(-4px) scaleY(1.05);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.animate-river-flow {
+  animation: riverFlow 8s ease-in-out infinite;
+}
+
+@keyframes slowPulse {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+.animate-slow-pulse {
+  animation: slowPulse 5s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-river-glaze);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-sky-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-deep-blue);
+}
+
+/* Prefers reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-river-flow,
+  .animate-slow-pulse,
+  .transition-all,
+  .transition-transform {
+    animation: none !important;
+    transition: none !important;
+  }
+}
