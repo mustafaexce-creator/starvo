@@ -141,7 +141,7 @@ function Header({ scrolled, isMobileMenuOpen, setIsMobileMenuOpen }: HeaderProps
               key={link.href}
               href={link.href}
               onClick={(e) => handleScrollTo(e, link.href)}
-              className="text-base font-medium text-brand-deep-blue/70 hover:text-brand-deep-blue transition-colors relative after:absolute after:bottom-[-4px] after:inset-x-0 after:h-[2px] after:bg-brand-amber-blossom after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-right"
+              className="text-base font-medium text-brand-deep-blue/70 hover:text-brand-deep-blue transition-colors relative after:absolute after:bottom-[-4px] after:inset-x-0 after:h-[2px] after:bg-brand-sky-blue after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-right"
             >
               {link.label}
             </a>
