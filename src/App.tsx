@@ -41,8 +41,8 @@ const schemaData = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "30.5081",
-    "longitude": "47.8173"
+    "latitude": "30.5092215",
+    "longitude": "47.8358567"
   },
   "openingHoursSpecification": [
     {
@@ -733,7 +733,7 @@ function Location() {
                     <span className="text-sm font-semibold text-white drop-shadow-sm">مجاور مطعم حلم</span>
                   </div>
                   <a 
-                    href="https://maps.google.com/?q=30.5081,47.8173" 
+                    href="https://www.google.com/maps/place/MMC+%D8%A8%D9%86%D8%A7%D9%8A%D8%A9+%D8%A7%D9%84%D8%B7%D8%A8+%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AB%E2%80%AD/@30.5092238,47.8345692,312m/data=!3m2!1e3!4b1!4m14!1m7!3m6!1s0x3fc497657e1a6c5d:0xbf258a252f11e1cf!2z2LLZh9mI2LEg2LnYqNiz2Yog2KfYqNmIINin2YTZiNix2K8!8m2!3d30.5094139!4d47.8356158!16s%2Fg%2F11rjkrr1ng!3m5!1s0x3fc49743d332e1cf:0x1247f4630119a4ac!8m2!3d30.5092215!4d47.8358567!16s%2Fg%2F11h1dbtx0l!5m1!1e4?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="px-5 py-2 bg-brand-deep-blue text-brand-river-glaze text-xs font-bold hover:bg-brand-sky-blue hover:text-brand-deep-blue transition-colors rounded-sm shadow-sm"
