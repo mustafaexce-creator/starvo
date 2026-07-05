@@ -16,9 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Path alias for shadcn/ui */
-    "baseUrl": ".",
-    "ignoreDeprecations": "5.0",
     "paths": {
       "@/*": ["./src/*"]
     },
