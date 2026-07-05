@@ -82,6 +82,28 @@
   background: var(--color-brand-deep-blue);
 }
 
+/* Animated River Separator */
+@keyframes riverWave {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-river-wave-slow {
+  animation: riverWave 28s linear infinite;
+}
+
+.animate-river-wave-medium {
+  animation: riverWave 18s linear infinite;
+}
+
+.animate-river-wave-fast {
+  animation: riverWave 12s linear infinite;
+}
+
 /* Prefers reduced motion overrides */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -90,6 +112,9 @@
   
   .animate-river-flow,
   .animate-slow-pulse,
+  .animate-river-wave-slow,
+  .animate-river-wave-medium,
+  .animate-river-wave-fast,
   .transition-all,
   .transition-transform {
     animation: none !important;

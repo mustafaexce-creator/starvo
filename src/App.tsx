@@ -81,6 +81,7 @@ export default function App() {
       <Header scrolled={scrolled} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
       <main id="main-content">
         <Hero />
+        <RiverSeparator />
         <TrustBar />
         <About />
         <Services />
@@ -270,6 +271,51 @@ function Hero() {
 }
 
 // ----------------------------------------------------
+// RIVER SEPARATOR
+// ----------------------------------------------------
+function RiverSeparator() {
+  return (
+    <div className="relative w-full overflow-hidden h-24 -mt-12 z-20 pointer-events-none select-none">
+      {/* Wave 1 (Back) */}
+      <svg
+        viewBox="0 0 2880 120"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 left-0 w-[200%] h-full animate-river-wave-slow"
+      >
+        <path
+          d="M 0 50 C 240 30, 480 70, 720 50 C 960 30, 1200 70, 1440 50 C 1680 30, 1920 70, 2160 50 C 2400 30, 2640 70, 2880 50 L 2880 120 L 0 120 Z"
+          fill="var(--color-brand-sky-blue)"
+          opacity="0.25"
+        />
+      </svg>
+      {/* Wave 2 (Middle) */}
+      <svg
+        viewBox="0 0 2880 120"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 left-0 w-[200%] h-full animate-river-wave-medium"
+      >
+        <path
+          d="M 0 70 C 240 85, 480 55, 720 70 C 960 85, 1200 55, 1440 70 C 1680 85, 1920 55, 2160 70 C 2400 85, 2640 55, 2880 70 L 2880 120 L 0 120 Z"
+          fill="var(--color-brand-clay-sand)"
+          opacity="0.35"
+        />
+      </svg>
+      {/* Wave 3 (Front) */}
+      <svg
+        viewBox="0 0 2880 120"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 left-0 w-[200%] h-full animate-river-wave-fast"
+      >
+        <path
+          d="M 0 85 C 240 75, 480 95, 720 85 C 960 75, 1200 95, 1440 85 C 1680 75, 1920 95, 2160 85 C 2400 75, 2640 95, 2880 85 L 2880 120 L 0 120 Z"
+          fill="var(--color-brand-deep-blue)"
+        />
+      </svg>
+    </div>
+  )
+}
+
+// ----------------------------------------------------
 // TRUST BAR
 // ----------------------------------------------------
 function TrustBar() {
@@ -289,7 +335,7 @@ function TrustBar() {
   ]
 
   return (
-    <section className="bg-brand-deep-blue text-brand-river-glaze py-12 border-t border-b border-brand-midnight-blue z-10 relative">
+    <section className="bg-brand-deep-blue text-brand-river-glaze py-12 border-b border-brand-midnight-blue z-10 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="sr-only">لماذا عيادة ستافرو</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-brand-sky-blue/20">
