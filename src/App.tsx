@@ -598,7 +598,7 @@ function Reviews() {
 function Location() {
   return (
     <section id="location" className="py-20 md:py-32 bg-brand-river-glaze relative z-10 border-t border-brand-clay-sand/30">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
         <div className="lg:col-span-6 flex flex-col items-start text-start">
           <div className="text-sm font-semibold tracking-wider text-brand-sky-blue mb-3 uppercase">الموقع والتواصل</div>
           <h2 className="font-display text-3xl sm:text-4xl font-bold mb-8">زوروا عيادتنا</h2>
@@ -650,8 +650,8 @@ function Location() {
               <div className="p-3 rounded-sm bg-brand-clay-sand/20 text-brand-sky-blue flex-shrink-0"><InstagramIcon className="w-5 h-5" /></div>
               <div>
                 <h3 className="font-display text-base font-bold mb-1">انستغرام</h3>
-                <a href="https://instagram.com/dr.mustafa_ahmed_" target="_blank" rel="noopener noreferrer" className="text-brand-sky-blue hover:text-brand-amber-blossom font-semibold transition-colors" dir="ltr">
-                  @dr.mustafa_ahmed_
+                <a href="https://www.instagram.com/stafro.clinic/" target="_blank" rel="noopener noreferrer" className="text-brand-sky-blue hover:text-brand-amber-blossom font-semibold transition-colors" dir="ltr">
+                  @stafro.clinic
                 </a>
               </div>
             </div>
@@ -666,23 +666,35 @@ function Location() {
           </div>
         </div>
 
-        {/* Map Placeholder */}
-        <div className="lg:col-span-6 w-full">
-          <div className="relative">
-            <div className="absolute inset-0 border border-brand-sky-blue/30 transform -translate-x-4 translate-y-4 rounded-sm pointer-events-none"></div>
-            <div className="relative aspect-[16/10] w-full bg-brand-clay-sand/20 border border-brand-clay-sand flex flex-col justify-between p-8 rounded-sm shadow-sm min-h-[300px]">
-              <div className="flex justify-between items-start text-xs uppercase tracking-widest text-brand-sky-blue/70 font-semibold">
-                <span>خريطة الموقع</span>
-                <span>البصرة — شارع السعدي</span>
-              </div>
-              <div className="my-auto text-center px-4 py-8">
-                <MapPin className="w-10 h-10 text-brand-amber-blossom mx-auto mb-4 animate-bounce" />
-                <p className="text-sm text-brand-deep-blue/70 font-medium mb-2">[خريطة Google Maps تفاعلية — تُضاف قبل الإطلاق]</p>
-              </div>
-              <div className="flex justify-center">
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-brand-deep-blue text-brand-river-glaze text-xs font-semibold hover:bg-brand-midnight-blue transition-colors rounded-sm">
-                  فتح في خرائط جوجل
-                </a>
+        {/* Location Map Image */}
+        <div className="lg:col-span-6 w-full h-full">
+          <div className="relative group h-full flex flex-col">
+            <div className="absolute inset-0 border border-brand-sky-blue/30 transform -translate-x-4 translate-y-4 rounded-sm pointer-events-none transition-transform group-hover:-translate-x-2 group-hover:translate-y-2 duration-300"></div>
+            <div className="relative flex-1 overflow-hidden rounded-sm border border-brand-clay-sand/40 shadow-md min-h-[400px] lg:min-h-full flex flex-col">
+              <img 
+                src="/location.jpg" 
+                alt="خريطة موقع عيادة ستافرو في البصرة" 
+                className="w-full h-full object-cover absolute inset-0 transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-deep-blue/80 via-transparent to-brand-deep-blue/20 opacity-90 flex flex-col justify-between p-6">
+                <div className="flex justify-between items-start text-xs uppercase tracking-widest text-brand-river-glaze/95 font-semibold z-10">
+                  <span className="bg-brand-deep-blue/60 backdrop-blur-xs px-2.5 py-1 rounded-xs">خريطة الموقع</span>
+                  <span className="bg-brand-deep-blue/60 backdrop-blur-xs px-2.5 py-1 rounded-xs">البصرة — شارع السعدي</span>
+                </div>
+                <div className="flex justify-between items-center mt-auto z-10">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-brand-amber-blossom animate-pulse" />
+                    <span className="text-sm font-semibold text-white drop-shadow-sm">مجاور مطعم حلم</span>
+                  </div>
+                  <a 
+                    href="https://maps.google.com/?q=30.5081,47.8173" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="px-5 py-2 bg-brand-deep-blue text-brand-river-glaze text-xs font-bold hover:bg-brand-sky-blue hover:text-brand-deep-blue transition-colors rounded-sm shadow-sm"
+                  >
+                    فتح في خرائط جوجل
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -766,9 +778,9 @@ function Footer() {
             <div className="w-1.5 h-1.5 rounded-full bg-brand-amber-blossom"></div>
             <span className="text-xs text-brand-clay-sand font-medium">د. مصطفى أحمد — طب وتجميل الأسنان</span>
           </div>
-          <a href="https://instagram.com/dr.mustafa_ahmed_" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs text-brand-sky-blue hover:text-brand-amber-blossom mt-2 transition-colors">
+          <a href="https://www.instagram.com/stafro.clinic/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs text-brand-sky-blue hover:text-brand-amber-blossom mt-2 transition-colors">
             <InstagramIcon className="w-4 h-4" />
-            <span dir="ltr">@dr.mustafa_ahmed_</span>
+            <span dir="ltr">@stafro.clinic</span>
           </a>
         </div>
 
